@@ -26,15 +26,18 @@
 
 ### Installation and Usage
 
-1. Clone the repository
-2. (Optional) Create a virtual environment and activate it:
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/Mbellni/AnchorBot.git
+   cd AnchorBot
+3. (Optional) Create a virtual environment and activate it:
    ```bash
    python -m venv venv
    source venv/bin/activate  # On Windows: venv\Scripts\activate
-3. Install dependencies:
+4. Install dependencies:
    ```bash
    pip install -r requirements.txt
-4. Run my_chatbot.py
+5. Run anchorbot.py
 
 ---
 
