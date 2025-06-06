@@ -28,7 +28,7 @@
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/Mbellni/AnchorBot.git
+   git clone https://github.com/Mbellni/AnchorBot-chatbot.git
    cd AnchorBot
 3. (Optional) Create a virtual environment and activate it:
    ```bash
