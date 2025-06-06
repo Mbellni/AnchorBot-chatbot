@@ -48,6 +48,6 @@ AnchorBot uses location data only temporarily for café recommendations and does
 
 ## Contact
 Created by - Margarida Belo
-GitHub: https://github.com/yourusername
+GitHub: [https://github.com/yourusername](https://github.com/Mbellni)
 
 
