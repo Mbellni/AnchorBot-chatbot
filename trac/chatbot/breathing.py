@@ -11,60 +11,79 @@ class BreathingExercise:
         self.delay = delay
 
     def count_down(self, phase):
-        print(f"{Fore.GREEN}{phase}{Style.RESET_ALL}")
+        displayer = TextPauses(f"{Fore.GREEN}{phase}{Style.RESET_ALL}")
+        displayer.display()
         for i in range(self.breath_count, 0, -1):
-            print(f"{Fore.GREEN}{i}{Style.RESET_ALL}")
+            displayer = TextPauses(f"{Fore.GREEN}{i}{Style.RESET_ALL}")
+            displayer.display()
             time.sleep(self.delay)
 
     def perform(self):
         for cycle in range(1, self.repeat_count + 1):
-            print(f"\n{Fore.GREEN}Cycle {cycle} of {self.repeat_count}{Style.RESET_ALL}")
+            displayer = TextPauses(f"\n{Fore.GREEN}Cycle {cycle} of {self.repeat_count}{Style.RESET_ALL}")
+            displayer.display()
             self.count_down("Breathing in...")
             self.count_down("Holding...")
             self.count_down("Breathing out...")
             time.sleep(1)
 
 def ask_breathing_1(classifier):
-    answer = input(QUESTION_BREATHING_1).strip().lower()
+    displayer = TextPauses(QUESTION_BREATHING_1)
+    displayer.display()
+    answer = input("> ").strip().lower()
     if answer == "yes":
         displayer = TextPauses(BREATHING_DETAILS)
         displayer.display()
         ask_breathing2(classifier)
     elif answer == "skip":
-        ask_grounding(classifier)  # 🔧 FIXED HERE
+        ask_grounding(classifier)
     else:
-        print(RETRY_YES_SKIP)
+        displayer = TextPauses(RETRY_YES_SKIP)
+        displayer.display()
         time.sleep(2)
         ask_breathing_1(classifier)
 
 def ask_breathing2(classifier):
-    answer = input(QUESTION_BREATHING_START).strip().lower()
+    displayer = TextPauses(QUESTION_BREATHING_START)
+    displayer.display()
+    answer = input("> ").strip().lower()
     if answer == "start":
         BreathingExercise().perform()
-        print(AFTER_BREATHING_MSG)
+        displayer = TextPauses(AFTER_BREATHING_MSG)
+        displayer.display()
         time.sleep(2)
 
-        feeling_input = input(QUESTION_FEELING_AFTER_BREATHING)
-        sentiment = classifier.classify(feeling_input)
+        displayer = TextPauses(QUESTION_FEELING_AFTER_BREATHING)
+        displayer.display()
+        feeling_input = input("> ").strip()
 
-        print(RESPONSES_SENTIMENT.get(sentiment, RESPONSES_SENTIMENT["default"]))
+        sentiment = classifier.classify(feeling_input)
+        displayer = TextPauses(RESPONSES_SENTIMENT.get(sentiment, RESPONSES_SENTIMENT["default"]))
+        displayer.display()
         time.sleep(3)
         ask_breathing_repeat(classifier)
     else:
-        print(RETRY_START)
+        displayer = TextPauses(RETRY_START)
+        displayer.display()
         time.sleep(2)
         ask_breathing2(classifier)
 
 def ask_breathing_repeat(classifier):
-    print(REPEAT_BREATHING_PROMPT)
-    answer = input(REPEAT_BREATHING_Q).strip().lower()
+    displayer = TextPauses(REPEAT_BREATHING_PROMPT)
+    displayer.display()
+    displayer = TextPauses(REPEAT_BREATHING_Q)
+    displayer.display()
+    answer = input("> ").strip().lower()
     if answer == "yes":
         ask_breathing2(classifier)
     elif answer == "no":
-        print(ACK_NO_REPEAT)
+        displayer = TextPauses(ACK_NO_REPEAT)
+        displayer.display()
         time.sleep(1)
-        ask_grounding(classifier)  # 🔧 FIXED HERE
+        ask_grounding(classifier)
     else:
-        print(RETRY_YES_NO)
+        displayer = TextPauses(RETRY_YES_NO)
+        displayer.display()
         time.sleep(2)
         ask_breathing_repeat(classifier)
+

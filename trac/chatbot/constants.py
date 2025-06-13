@@ -46,14 +46,14 @@ BREATHING_INTRO = f"""{Fore.GREEN}
 Would you like to try a breathing exercise, or perhaps explore a different calming approach that feels right for you? [[pause=2]]
 Note: Please don’t attempt this exercise if you have breathing problems or any conditions that may worsen by this exercise. [[pause=3]]
 {Style.RESET_ALL}"""
-QUESTION_BREATHING_1 = f"{Fore.GREEN}Shall we start? Type 'start' when you are ready.\n{Style.RESET_ALL}"
+QUESTION_BREATHING_1 = f"""{Fore.GREEN}Shall we get started?\nPlease type \"yes\" or \"skip\".\n{Style.RESET_ALL}"""
 POSITIVE_ACK = f"{Fore.GREEN}Wonderful!{Style.RESET_ALL}\n"
 BREATHING_DETAILS = f"""{Fore.GREEN}
 Let’s do the 4-4-4 exercise. [[pause=2]]
 You’re going to take a deep breath in for 4 counts, hold for 4 counts and exhale for 4 counts. [[pause=2]]
 I will take care of the counts so you can just sit back and relax. [[pause=2]]
 {Style.RESET_ALL}"""
-QUESTION_BREATHING_START = f"""{Fore.GREEN}Shall we get started?\nPlease type \"yes\" or \"no\".\n{Style.RESET_ALL}"""
+QUESTION_BREATHING_START = f"{Fore.GREEN}Shall we start? Type 'start' when you are ready.\n{Style.RESET_ALL}"
 AFTER_BREATHING_MSG = f"""{Fore.GREEN}Well done! [[pause=1]] Breathing can be a great way to bring focus to the body while emptying your mind. [[pause=2]]{Style.RESET_ALL}"""
 QUESTION_FEELING_AFTER_BREATHING = f"""{Fore.GREEN}How are you feeling right now?\n{Style.RESET_ALL}"""
 REPEAT_BREATHING_PROMPT = f"""{Fore.GREEN}If you'd like, we can try the breathing exercise again to help bring you some calm. [[pause=2]]{Style.RESET_ALL}"""
@@ -72,7 +72,7 @@ GROUNDING_PROMPT = f"{Fore.GREEN}Please type 'start' or 'skip'.\n{Style.RESET_AL
 GROUNDING_EXERCISE = f"""{Fore.GREEN}Let’s try a grounding exercise called “5-4-3-2-1.” [[pause=2]]\nThis helps bring you to the present moment. [[pause=2]]\n- Name 5 things you can see around you. [[pause=2]]\n- Name 4 things you can touch. [[pause=2]]\n- Name 3 things you can hear. [[pause=2]]\n- Name 2 things you can smell. [[pause=2]]\n- And finally, name 1 thing you can taste. [[pause=3]]\n{Style.RESET_ALL}"""
 
 # === Continue Prompt ===
-CONTINUE_PROMPT = f"""{Fore.GREEN}Take your time and let me know when you're ready to continue. [[pause=3]]\nPlease type \"continue\".\n{Style.RESET_ALL}"""
+CONTINUE_PROMPT = f"""{Fore.GREEN}Take your time and let me know when you're ready to continue.\nPlease type \"continue\".\n{Style.RESET_ALL}"""
 CONTINUE_ACK = f"""{Fore.GREEN}Well done! [[pause=1]] Taking a moment to ground yourself can be so powerful. [[pause=2]]\n{Style.RESET_ALL}"""
 
 # === Affirmations ===
@@ -110,7 +110,7 @@ NO_NAMED_CAFES = f"{Fore.GREEN}No cafes with a name found in the given radius.{S
 CAFE_FETCH_ERROR = f"{Fore.GREEN}Error: Unable to fetch nearby cafes. Details: {{}}{Style.RESET_ALL}"
 
 # === Conclusion ===
-CONCLUSION_PROMPT = f"""{Fore.GREEN}Before we wrap up, I’d love to hear—how are you feeling after our session? [[pause=2]]\n{Style.RESET_ALL}"""
+CONCLUSION_PROMPT = f"""{Fore.GREEN}Before we wrap up, I’d love to hear—how are you feeling after our session?\n{Style.RESET_ALL}"""
 CONCLUSION_GENERIC_RESPONSE = f"{Fore.GREEN}It sounds like there’s a lot on your mind. [[pause=2]]{Style.RESET_ALL}"
 CLOSING_RECOMMENDATIONS = f"""{Fore.GREEN}Before we part, here are a few small ways to carry calm with you throughout the day: [[pause=3]]\n- Pause for a few deep breaths whenever things feel overwhelming. Even a moment can help ground you. [[pause=2]]\n- Take a brief walk outside or find a quiet corner to unwind, especially if you’re feeling a bit unsettled. [[pause=2]]\n- Practice gratitude by naming one thing you’re thankful for today. It can bring a surprising amount of peace. [[pause=2]]\nRemember, it’s okay to take breaks and prioritize your well-being. Little moments of care make a big difference. [[pause=3]]\n{Style.RESET_ALL}"""
 FINAL_GOODBYE = f"""{Fore.GREEN}Thank you for being here, and remember, I’m always just a message away if you need a moment of calm. [[pause=2]]\n{Style.RESET_ALL}"""
