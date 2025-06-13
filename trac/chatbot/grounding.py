@@ -3,7 +3,7 @@ from .text_utils import TextPauses
 from .constants import *
 from .cafes import CafeLogic
 
-def ask_grounding():
+def ask_grounding(classifier):
     displayer = TextPauses(GROUNDING_INTRO)
     displayer.display()
 
@@ -11,41 +11,41 @@ def ask_grounding():
     if question == "start":
         displayer = TextPauses(GROUNDING_EXERCISE)
         displayer.display()
-        ask_continue()
+        ask_continue(classifier)
     elif question == "skip":
-        ask_positive_affirmations()
+        ask_positive_affirmations(classifier)
     else:
         print(RETRY_START_SKIP)
         time.sleep(2)
-        ask_grounding()
+        ask_grounding(classifier)
 
-def ask_continue():
+def ask_continue(classifier):
     question_continue = input(CONTINUE_PROMPT).strip().lower()
     if question_continue == "continue":
         print(CONTINUE_ACK)
         time.sleep(3)
-        ask_positive_affirmations()
+        ask_positive_affirmations(classifier)
     else:
         print(RETRY_CONTINUE)
         time.sleep(2)
-        ask_continue()
+        ask_continue(classifier)
 
-def ask_positive_affirmations():
+def ask_positive_affirmations(classifier):
     print(POSITIVE_INTRO)
     time.sleep(4)
     choice = input(AFFIRMATIONS_START_PROMPT).strip().lower()
     if choice == "start":
         displayer = TextPauses(AFFIRMATIONS_LIST)
         displayer.display()
-        ask_feeling_affirmations()
+        ask_feeling_affirmations(classifier)
     elif choice == "skip":
-        ask_cafe()
+        ask_cafe(classifier)
     else:
         print(RETRY_START_SKIP)
         time.sleep(2)
-        ask_positive_affirmations()
+        ask_positive_affirmations(classifier)
 
-def ask_feeling_affirmations():
+def ask_feeling_affirmations(classifier):
     question = input(AFFIRMATION_CHOICE_PROMPT).strip()
     response = AFFIRMATION_RESPONSES.get(question)
     if response:
@@ -57,13 +57,13 @@ def ask_feeling_affirmations():
         time.sleep(5)
         print(CAFE_PRIVACY_NOTE)
         time.sleep(10)
-        ask_cafe()
+        ask_cafe(classifier)
     else:
         print(RETRY_AFFIRMATION_CHOICE)
         time.sleep(3)
-        ask_feeling_affirmations()
+        ask_feeling_affirmations(classifier)
 
-def ask_cafe():
+def ask_cafe(classifier):
     question = input(CAFE_PROMPT).strip().lower()
     if question == "yes":
         chatbot = CafeLogic()
@@ -74,7 +74,7 @@ def ask_cafe():
         else:
             print(CAFE_NOT_FOUND)
         time.sleep(3)
-        ask_conclusion(chatbot.classifier)
+        ask_conclusion(classifier)
     elif question == "conclude":
         displayer = TextPauses(CAFE_CONCLUDE_TEXT)
         displayer.display()
@@ -82,7 +82,7 @@ def ask_cafe():
     else:
         print(RETRY_CAFE_PROMPT)
         time.sleep(2)
-        ask_cafe()
+        ask_cafe(classifier)
 
 def ask_conclusion(classifier):
     question_conclusion_feel = input(CONCLUSION_PROMPT).strip()
