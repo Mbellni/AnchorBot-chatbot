@@ -37,8 +37,10 @@
 4. Install dependencies:
    ```bash
    pip install -r requirements.txt
-5. Run anchorbot.py
-
+5. Run the chatbot
+Open terminal and run:
+   ```bash
+   python -m trac.main
 ---
 
 ## Acknowledgements
