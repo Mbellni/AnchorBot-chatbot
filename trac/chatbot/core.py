@@ -1,8 +1,10 @@
-from chatbot.text_utils import TextPauses
-from chatbot.constants import *
-from chatbot.breathing import ask_breathing_1
 import time
 import sys
+from .text_utils import TextPauses
+from .constants import *
+from .breathing import ask_breathing_1
+from .sentiment import Feelings
+
 
 def start_conversation(classifier):
     print(INTRO_TEXT)
@@ -21,7 +23,13 @@ def start_conversation(classifier):
         start_conversation(classifier)
 
 
+# Initialize the classifier
+classifier = Feelings()
 
+# Entry point for running the chatbot
+def run():
+    print("Chatbot is running...\n")
+    start_conversation(classifier)
 
 
     

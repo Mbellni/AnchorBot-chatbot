@@ -1,7 +1,7 @@
 import time
-from chatbot.text_utils import TextPauses
-from chatbot.constants import *
-from chatbot.cafes import CafeLogic
+from .text_utils import TextPauses
+from .constants import *
+from .cafes import CafeLogic
 
 def ask_grounding():
     displayer = TextPauses(GROUNDING_INTRO)

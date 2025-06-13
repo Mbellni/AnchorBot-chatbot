@@ -1,4 +1,4 @@
-from chatbot_base import ChatbotBase
+from anchorbot.chatbot_base import ChatbotBase
 
 # Standard library
 import time

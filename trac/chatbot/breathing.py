@@ -1,8 +1,8 @@
-from chatbot.text_utils import TextPauses
-from chatbot.constants import *
+from .text_utils import TextPauses
+from .constants import *
 import time
 from colorama import Fore, Style
-from chatbot.grounding import ask_grounding
+from .grounding import ask_grounding
 
 class BreathingExercise:
     def __init__(self, breath_count=4, repeat_count=3, delay=1):
