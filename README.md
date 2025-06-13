@@ -28,8 +28,8 @@
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/Mbellni/AnchorBot-chatbot.git
-   cd AnchorBot
+   git clone https://github.com/Mbellni/TRAC-chatbot.git
+    cd TRAC-chatbot
 3. (Optional) Create a virtual environment and activate it:
    ```bash
    python -m venv venv
