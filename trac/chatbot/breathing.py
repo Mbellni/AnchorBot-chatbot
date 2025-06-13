@@ -31,7 +31,7 @@ def ask_breathing_1(classifier):
         displayer.display()
         ask_breathing2(classifier)
     elif answer == "skip":
-        ask_grounding()
+        ask_grounding(classifier)  # 🔧 FIXED HERE
     else:
         print(RETRY_YES_SKIP)
         time.sleep(2)
@@ -63,7 +63,7 @@ def ask_breathing_repeat(classifier):
     elif answer == "no":
         print(ACK_NO_REPEAT)
         time.sleep(1)
-        ask_grounding()
+        ask_grounding(classifier)  # 🔧 FIXED HERE
     else:
         print(RETRY_YES_NO)
         time.sleep(2)
