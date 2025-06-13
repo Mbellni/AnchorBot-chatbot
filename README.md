@@ -1,6 +1,6 @@
-# AnchorBot
+# Trac
 
-**AnchorBot** is a friendly and calming chatbot designed to help users find moments of tranquillity, reflection, and awareness. Through guided breathing exercises, positive affirmations, grounding techniques, and cosy café recommendations, AnchorBot supports emotional well-being and mindfulness.
+**Trac** is a friendly and calming chatbot designed to help users find moments of tranquillity, reflection, and awareness. Through guided breathing exercises, positive affirmations, grounding techniques, and cosy café recommendations, AnchorBot supports emotional well-being and mindfulness.
 
 ---
 
