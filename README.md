@@ -28,8 +28,8 @@
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/Mbellni/AnchorBot-chatbot.git
-   cd AnchorBot
+   git clone https://github.com/Mbellni/TRAC-chatbot.git
+    cd TRAC-chatbot
 3. (Optional) Create a virtual environment and activate it:
    ```bash
    python -m venv venv
@@ -37,8 +37,10 @@
 4. Install dependencies:
    ```bash
    pip install -r requirements.txt
-5. Run anchorbot.py
-
+5. Run the chatbot
+Open terminal and run:
+   ```bash
+   python -m trac.main
 ---
 
 ## Acknowledgements
