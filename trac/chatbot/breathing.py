@@ -30,7 +30,7 @@ class BreathingExercise:
 def ask_breathing_1(classifier):
     displayer = TextPauses(QUESTION_BREATHING_1)
     displayer.display()
-    answer = input("> ").strip().lower()
+    answer = input("").strip().lower()
     if answer == "yes":
         displayer = TextPauses(BREATHING_DETAILS)
         displayer.display()
@@ -46,7 +46,7 @@ def ask_breathing_1(classifier):
 def ask_breathing2(classifier):
     displayer = TextPauses(QUESTION_BREATHING_START)
     displayer.display()
-    answer = input("> ").strip().lower()
+    answer = input("").strip().lower()
     if answer == "start":
         BreathingExercise().perform()
         displayer = TextPauses(AFTER_BREATHING_MSG)
@@ -55,7 +55,7 @@ def ask_breathing2(classifier):
 
         displayer = TextPauses(QUESTION_FEELING_AFTER_BREATHING)
         displayer.display()
-        feeling_input = input("> ").strip()
+        feeling_input = input("").strip()
 
         sentiment = classifier.classify(feeling_input)
         displayer = TextPauses(RESPONSES_SENTIMENT.get(sentiment, RESPONSES_SENTIMENT["default"]))
@@ -73,7 +73,7 @@ def ask_breathing_repeat(classifier):
     displayer.display()
     displayer = TextPauses(REPEAT_BREATHING_Q)
     displayer.display()
-    answer = input("> ").strip().lower()
+    answer = input("").strip().lower()
     if answer == "yes":
         ask_breathing2(classifier)
     elif answer == "no":

@@ -9,7 +9,7 @@ def ask_grounding(classifier):
 
     displayer = TextPauses(GROUNDING_PROMPT)
     displayer.display()
-    question = input("> ").strip().lower()
+    question = input("").strip().lower()
 
     if question == "start":
         displayer = TextPauses(GROUNDING_EXERCISE)
@@ -26,7 +26,7 @@ def ask_grounding(classifier):
 def ask_continue(classifier):
     displayer = TextPauses(CONTINUE_PROMPT)
     displayer.display()
-    question_continue = input("> ").strip().lower()
+    question_continue = input("").strip().lower()
 
     if question_continue == "continue":
         displayer = TextPauses(CONTINUE_ACK)
@@ -46,7 +46,7 @@ def ask_positive_affirmations(classifier):
 
     displayer = TextPauses(AFFIRMATIONS_START_PROMPT)
     displayer.display()
-    choice = input("> ").strip().lower()
+    choice = input("").strip().lower()
 
     if choice == "start":
         displayer = TextPauses(AFFIRMATIONS_LIST)
@@ -64,7 +64,7 @@ def ask_positive_affirmations(classifier):
 def ask_feeling_affirmations(classifier):
     displayer = TextPauses(AFFIRMATION_CHOICE_PROMPT)
     displayer.display()
-    question = input("> ").strip()
+    question = input("").strip()
     response = AFFIRMATION_RESPONSES.get(question)
 
     if response:
@@ -92,7 +92,7 @@ def ask_feeling_affirmations(classifier):
 def ask_cafe(classifier):
     displayer = TextPauses(CAFE_PROMPT)
     displayer.display()
-    question = input("> ").strip().lower()
+    question = input("").strip().lower()
 
     if question == "yes":
         chatbot = CafeLogic()
@@ -118,7 +118,7 @@ def ask_cafe(classifier):
 def ask_conclusion(classifier):
     displayer = TextPauses(CONCLUSION_PROMPT)
     displayer.display()
-    question_conclusion_feel = input("> ").strip()
+    question_conclusion_feel = input("").strip()
 
     if classifier:
         sentiment = classifier.classify(question_conclusion_feel)
