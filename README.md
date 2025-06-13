@@ -37,11 +37,12 @@
 4. Install dependencies:
    ```bash
    pip install -r requirements.txt
-5. Run the chatbot
-Open terminal and run:
+5. Run the chatbot:
+6. Open the terminal and run:
    ```bash
    python -m trac.main
 ---
+NOTE: Make sure you have a wifi connection!
 
 ## Acknowledgements
 A great article by Arpit Sharma on geolocation in Python inspired the development of the café recommendation feature.
