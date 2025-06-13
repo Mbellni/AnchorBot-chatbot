@@ -46,7 +46,7 @@ NOTE: Make sure you have a wifi connection!
 
 ## Example Usage
 
-[![Watch the video](https://img.youtube.com/vi/VIDEO_ID/maxresdefault.jpg)](https://youtu.be/stNDhDnBb5Y?si=6-tlXNibhjDrgBP1=VIDEO_ID)
+[Watch video](https://youtu.be/stNDhDnBb5Y?si=6-tlXNibhjDrgBP1=VIDEO_ID)
 
 ## Acknowledgements
 A great article by Arpit Sharma on geolocation in Python inspired the development of the café recommendation feature.
